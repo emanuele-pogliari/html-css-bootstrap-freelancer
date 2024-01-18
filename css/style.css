@@ -1,5 +1,5 @@
 .my_color {
-    background-color: #2C3E50;
+    background-color: #3A546D;
 }
 
 .section_color {
@@ -26,4 +26,9 @@ hr {
 
 .second_hr {
     width: 10%;
+}
+
+
+.footer_color {
+    background-color: #2C3E50;
 }
