@@ -39,7 +39,7 @@
     <!-- end nav section -->
 
     <!-- header section -->
-    <header class="section_color py-5 text-white">
+    <div id="jumbotron" class="section_color py-5 text-white">
 
         <div class="container">
 
@@ -67,11 +67,11 @@
 
         </div>
 
-    </header>
+    </div>
     <!-- end header section -->
 
     <!-- portfolio section -->
-    <section class="py-3">
+    <section id="portfolio" class="py-3">
 
         <div class="container">
 
@@ -110,11 +110,11 @@
     <!-- end portfolio section -->
 
     <!-- about section -->
-    <section class="text-white section_color py-5 ">
+    <section id="about" class="text-white section_color py-5 ">
 
         <div class="container">
 
-            <div class="row mx-auto justify-content-center">
+            <div class="row justify-content-center">
 
                 <h2 class="text-uppercase text-center">About</h2>
 
@@ -154,10 +154,8 @@
     <!-- end about section -->
 
     <!-- Contact Me -->
-    <section id="contact_me" class="container-fluid py-5">
-
-        <div class="container">
-
+    <section id="contact_me" class="py-5">
+        <div class="container align-items-center ">
             <h2 class="text-uppercase text-center">Contact me</h2>
 
             <div class="col d-flex justify-content-center pb-3">
@@ -166,6 +164,25 @@
                 <hr class="second_hr border-black">
             </div>
 
+
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="inputName" aria-describedby="emailHelp"
+                        placeholder="Name">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                        placeholder="Email Address">
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="inputPhoneNumber" aria-describedby="emailHelp"
+                        placeholder="Phone Number">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="inputMessage" rows="5" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
         </div>
 
     </section>
@@ -174,7 +191,7 @@
 
     <!-- footer -->
 
-    <footer class="my_color text-white pt-5">
+    <footer #id="footer" class="my_color text-white pt-5">
 
         <div class="container">
 
@@ -203,7 +220,7 @@
 
                 <div class="col mb-4">
 
-                    <div class="text-uppercase mb-2 fs-5 fs-6">About Freelancer</div>
+                    <div class="text-uppercase mb-2 fs-5">About Freelancer</div>
 
                     <div>Freelancer is a free to use, open source Bootstrap theme created by
                         <a class="text-decoration-none link_text">Start Bootstrap</a>
@@ -220,7 +237,9 @@
 
         <div class="sub-footer footer_color py-4">
 
-            <div class="col text-center "><span>Copyright © Your Website 2019</span></div>
+            <div class="col text-center small">
+                <p>Copyright © Your Website 2019</p>
+            </div>
 
         </div>
 
