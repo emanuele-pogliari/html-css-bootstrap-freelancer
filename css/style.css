@@ -5,3 +5,25 @@
 .section_color {
     background-color: #1ABC9C;
 }
+
+
+#contact_me {
+    height: 400px;
+}
+
+.link_text {
+    color: #1ABC9C;
+}
+
+
+hr {
+    display: inline-block;
+    width: 20%;
+    border: 2px solid white;
+    opacity: 1;
+}
+
+
+.second_hr {
+    width: 10%;
+}
