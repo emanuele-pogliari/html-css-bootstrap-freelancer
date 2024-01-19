@@ -15,10 +15,7 @@
 }
 
 hr {
-    display: inline-block;
-    width: 15%;
-    border: 2px solid white;
-    opacity: 1;
+    width: 20%;
 }
 
 .second_hr {
@@ -34,7 +31,7 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+/* remove outline of textarea */
 textarea {
-    border: none;
     outline: none;
 }
