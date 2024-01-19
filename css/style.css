@@ -14,7 +14,7 @@
     color: #1ABC9C;
 }
 
-hr {
+.primo_hr {
     width: 20%;
 }
 
@@ -33,5 +33,6 @@ input::-webkit-inner-spin-button {
 
 /* remove outline of textarea */
 textarea {
+    border-radius: 5px;
     outline: none;
 }

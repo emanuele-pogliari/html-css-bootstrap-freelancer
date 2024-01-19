@@ -14,14 +14,14 @@
 <body>
 
     <!-- nav section -->
-    <nav class="navbar navbar-expand-md text-uppercase footer_color" data-bs-theme="dark">
+    <nav class="navbar fixed-top navbar-expand-md text-uppercase footer_color" data-bs-theme="dark">
         <div class="container">
             <a class="navbar-brand fw-bold " href="#">Start bootstrap</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link text-white" aria-current="page" href="#">portfolio</a>
@@ -32,6 +32,10 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">contact</a>
                     </li>
+                    <li class="nav-item"><button id="btn_theme" class="nav-link text-white"><i
+                                class="theme-i fa-solid fa-moon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -41,7 +45,7 @@
     <!-- header section -->
     <div id="jumbotron" class="color_emerald py-4 py-md-5 text-white">
 
-        <div class="container">
+        <div class="container pt-5">
 
             <div class="row align-content-center flex-column text-uppercase text-center ">
 
@@ -54,9 +58,9 @@
                 </div>
 
                 <div class="col d-flex justify-content-center pb-2 text-white">
-                    <hr class="rounded opacity-100 border-4">
+                    <hr class="rounded opacity-100 border-4 primo_hr">
                     <i class="fa fa-star align-self-center mx-3 fs-3"></i>
-                    <hr class="rounded opacity-100 border-4">
+                    <hr class="rounded opacity-100 border-4 primo_hr">
                 </div>
 
                 <div class="col">
@@ -77,12 +81,12 @@
 
             <div class="row my-4 justify-content-center ">
 
-                <h2 class="text-uppercase fs-4 text-center ">Portfolio</h2>
+                <h2 class="text-uppercase fs-2 text-center ">Portfolio</h2>
 
                 <div class="col d-flex justify-content-center mb-3">
-                    <hr class="border-black rounded opacity-100 border-4">
+                    <hr class="primo_hr primo_hr_lght border-black rounded opacity-100 border-4">
                     <i class="fa fa-star align-self-center mx-3 fs-3"></i>
-                    <hr class="border-black rounded opacity-100 border-4">
+                    <hr class="primo_hr primo_hr_lght border-black rounded opacity-100 border-4">
                 </div>
 
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-0">
@@ -159,9 +163,9 @@
             <h2 class="text-uppercase text-center">Contact me</h2>
 
             <div class="col d-flex justify-content-center pb-3">
-                <hr class="second_hr border-black rounded opacity-100 border-4">
+                <hr class="hr_lght second_hr border-black rounded opacity-100 border-4">
                 <i class="fa fa-star align-self-center mx-3 fs-3"></i>
-                <hr class="second_hr border-black rounded opacity-100 border-4">
+                <hr class="hr_lght second_hr border-black rounded opacity-100 border-4">
             </div>
 
 
@@ -183,11 +187,11 @@
                     <label class="border-0 " for="floatingInput">Phone Number</label>
                 </div>
 
-                <div class="mb-5">
-                    <textarea class=" ps-3 mb-3 pb-3 text-black border-0 border-bottom w-100 my_input" id="inputMessage"
+                <div class="mb-4">
+                    <textarea class=" ps-3 py-2 text-black border-0 border-bottom w-100 my_input" id="inputMessage"
                         rows="1" placeholder="Message"></textarea>
                 </div>
-                <button id="btn_sbmt" type="submit" class="btn color_emerald active">Submit</button>
+                <button id="btn_sbmt" type="submit" class="btn color_emerald active">Send</button>
             </form>
         </div>
 
@@ -261,13 +265,41 @@
         crossorigin="anonymous"></script>
 
     <script>
+        // function that change rows attribute of the textarea when it will be clicked
         var msg_input_wdw = document.querySelector("textarea");
         var msg_input_btn = document.querySelector("#btn_sbmt");
+        var portfolio_sec = document.querySelector("#portfolio");
 
         msg_input_wdw.addEventListener("click", function () {
             msg_input_wdw.setAttribute("rows", 5);
         })
 
+
+        // function that change background color of section white coloured (switch from light to dark)
+        var theme = document.querySelector("#btn_theme");
+        var theme_i = document.querySelector(".theme-i");
+        var primo_hr = document.getElementsByClassName(".hr_lght");
+
+        theme.addEventListener("click", function () {
+            document.getElementById("contact_me").classList.toggle("footer_color");
+            document.getElementById("contact_me").classList.toggle("text-white");
+
+            document.getElementById("portfolio").classList.toggle("footer_color");
+            document.getElementById("portfolio").classList.toggle("text-white");
+
+            theme_i.classList.toggle("fa-moon");
+            theme_i.classList.toggle("fa-sun");
+
+            primo_hr[0].classList.toggle("border-black")
+            primo_hr[1].classList.toggle("border-black")
+
+
+
+            msg_input_btn.classList.add("color_emerald");
+            msg_input_btn.classList.remove("active");
+
+
+        })
     </script>
 </body>
 
